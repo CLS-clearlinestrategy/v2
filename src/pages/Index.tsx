@@ -1,4 +1,5 @@
 import Hero from "@/components/Hero";
+import BannerSection from "@/components/BannerSection";
 import About from "@/components/About";
 import Differentials from "@/components/Differentials";
 import WhyVisage from "@/components/WhyVisage";
@@ -12,6 +13,7 @@ const Index = () => {
   return (
     <main>
       <Hero />
+      <BannerSection />
       <Differentials />
       <About />
       <WhyVisage />
