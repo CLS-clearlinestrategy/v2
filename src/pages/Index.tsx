@@ -1,5 +1,6 @@
-import Hero from "@/components/Hero";
+import Header from "@/components/Header";
 import BannerSection from "@/components/BannerSection";
+import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Differentials from "@/components/Differentials";
 import WhyVisage from "@/components/WhyVisage";
@@ -12,7 +13,7 @@ import Footer from "@/components/Footer";
 const Index = () => {
   return (
     <main>
-      <Hero />
+      <Header />
       <BannerSection />
       <Differentials />
       <About />
