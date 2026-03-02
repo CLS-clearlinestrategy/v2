@@ -3,7 +3,7 @@ import bannerImg from "@/assets/banner-visage.png";
 
 const BannerSection = () => {
   return (
-    <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-primary">
+    <section id="inicio" className="relative min-h-screen flex items-center overflow-hidden bg-primary pt-20">
       {/* Background gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/95 to-transparent z-10" />
 
