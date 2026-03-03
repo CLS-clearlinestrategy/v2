@@ -11,9 +11,9 @@ const fadeUp = {
 
 const About = () => {
   return (
-    <section className="section-padding bg-background">
+    <section id="sobre" className="section-padding bg-background">
       <div className="container-narrow">
-        <div className="grid gap-20 md:grid-cols-2 md:items-center">
+        <div className="grid gap-12 md:gap-20 md:grid-cols-2 md:items-center">
           {/* Text */}
           <motion.div
             initial="hidden"

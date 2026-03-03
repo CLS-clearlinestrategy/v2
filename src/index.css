@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
   :root {
     /* Official Visage Palette — #5B0A1C, #D0B3A1, #D5C7BE, #F7F0EB */
     --background: 25 35% 95%;

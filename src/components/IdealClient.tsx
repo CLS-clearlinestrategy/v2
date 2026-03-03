@@ -13,7 +13,7 @@ const IdealClient = () => {
   return (
     <section className="relative section-padding bg-primary text-primary-foreground overflow-hidden">
       <div className="container-narrow relative z-10">
-        <div className="grid gap-20 md:grid-cols-2 md:items-center">
+        <div className="grid gap-12 md:gap-20 md:grid-cols-2 md:items-center">
           <motion.div
             initial="hidden"
             whileInView="visible"

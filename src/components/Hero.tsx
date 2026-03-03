@@ -14,7 +14,7 @@ const Hero = () => {
       {/* Organic jewel background decoration */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
         <OrganicJewel
-          className="w-[500px] h-[500px] md:w-[700px] md:h-[700px]"
+          className="w-[300px] h-[300px] sm:w-[500px] sm:h-[500px] md:w-[700px] md:h-[700px]"
           opacity={0.06}
         />
       </div>
@@ -25,7 +25,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="mb-6 font-body text-sm tracking-[0.3em] uppercase text-accent"
+          className="mb-4 md:mb-6 font-body text-xs md:text-sm tracking-[0.3em] uppercase text-accent"
         >
           Clínica de Estética Integrativa Avançada
         </motion.p>
@@ -34,7 +34,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.4 }}
-          className="font-display text-4xl md:text-6xl lg:text-7xl font-medium text-primary-foreground mb-6 leading-tight tracking-wide"
+          className="font-display text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-medium text-primary-foreground mb-4 md:mb-6 leading-tight tracking-wide"
         >
           Estética Integrativa Avançada
         </motion.h1>
@@ -43,14 +43,14 @@ const Hero = () => {
           initial={{ opacity: 0, scaleX: 0 }}
           animate={{ opacity: 1, scaleX: 1 }}
           transition={{ duration: 0.5, delay: 0.7 }}
-          className="mx-auto mb-8 h-px w-24 bg-accent"
+          className="mx-auto mb-6 md:mb-8 h-px w-16 md:w-24 bg-accent"
         />
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.8 }}
-          className="mx-auto max-w-2xl font-body text-lg md:text-xl text-primary-foreground/85 font-light leading-relaxed tracking-wide mb-4"
+          className="mx-auto max-w-2xl font-body text-base md:text-xl text-primary-foreground/85 font-light leading-relaxed tracking-wide mb-2 md:mb-4"
         >
           Naturalidade construída com método.
         </motion.p>
@@ -59,7 +59,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.9 }}
-          className="mx-auto max-w-2xl font-body text-base md:text-lg text-primary-foreground/70 font-light leading-relaxed tracking-wide"
+          className="mx-auto max-w-2xl font-body text-sm md:text-lg text-primary-foreground/70 font-light leading-relaxed tracking-wide"
         >
           Protocolos personalizados que respeitam sua individualidade com técnica, ética e sofisticação.
         </motion.p>
@@ -69,19 +69,19 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1.1 }}
-          className="mt-14 flex flex-col sm:flex-row items-center justify-center gap-5"
+          className="mt-10 md:mt-14 flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-5"
         >
           <a
             href="https://wa.me/5561999999999?text=Olá! Gostaria de agendar uma avaliação na Visage."
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block rounded-md bg-accent px-10 py-4 font-body text-sm tracking-[0.2em] uppercase text-accent-foreground transition-all duration-500 hover:shadow-[0_0_30px_hsl(var(--beige)/0.5)] hover:bg-accent/90"
+            className="w-full sm:w-auto inline-block rounded-md bg-accent px-6 py-3 sm:px-10 sm:py-4 font-body text-xs sm:text-sm tracking-[0.2em] uppercase text-accent-foreground transition-all duration-500 hover:shadow-[0_0_30px_hsl(var(--beige)/0.5)] hover:bg-accent/90"
           >
             Agendar Avaliação
           </a>
           <a
             href="#protocolos"
-            className="inline-block rounded-md border border-primary-foreground/30 px-10 py-4 font-body text-sm tracking-[0.2em] uppercase text-primary-foreground/90 transition-all duration-500 hover:border-accent hover:text-accent"
+            className="w-full sm:w-auto inline-block rounded-md border border-primary-foreground/30 px-6 py-3 sm:px-10 sm:py-4 font-body text-xs sm:text-sm tracking-[0.2em] uppercase text-primary-foreground/90 transition-all duration-500 hover:border-accent hover:text-accent"
           >
             Conhecer Protocolos
           </a>

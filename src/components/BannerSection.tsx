@@ -1,16 +1,30 @@
 import { motion } from "framer-motion";
 import bannerImg from "@/assets/banner_visage_v2.png";
+import patternBg from "@/assets/b-big.png";
 import OrganicJewel from "./OrganicJewel";
 
 const BannerSection = () => {
   return (
     <section id="inicio" className="relative flex flex-col items-center overflow-hidden bg-[#D5C7BE] pt-32 pb-8">
+      {/* Pattern Background */}
+      <div 
+        className="absolute inset-0 z-0 opacity-10 pointer-events-none" 
+        style={{ 
+          backgroundImage: `url(${patternBg})`, 
+          backgroundSize: "400px",
+          backgroundRepeat: "repeat"
+        }} 
+      />
+
       {/* Main Banner Container */}
-      <div className="w-full max-w-[1500px] mx-auto px-4 md:px-8 flex-grow flex items-center">
-        <div className="relative w-full rounded-[3rem] md:rounded-[5rem] overflow-hidden flex flex-col shadow-[0_40px_100px_-20px_rgba(0,0,0,0.3)] group">
+      <div className="relative z-10 w-full max-w-[1500px] mx-auto px-4 md:px-8 flex-grow flex items-center">
+        <div className="relative w-full flex flex-col group">
           
+          {/* Custom Shadow Element */}
+          <div className="absolute top-4 md:top-6 left-1/2 -translate-x-1/2 w-[90%] md:w-[85%] h-[500px] md:h-[700px] rounded-[2.5rem] md:rounded-[5rem] bg-black/20 shadow-2xl blur-xl" />
+
           {/* Top Section (Banner Image & Content) */}
-          <div className="relative w-full h-[420px] md:h-[700px] flex items-center">
+          <div className="relative z-10 w-full h-[500px] md:h-[700px] flex items-center rounded-[2.5rem] md:rounded-[5rem] overflow-hidden">
             {/* Background Image Layer */}
             <div className="absolute inset-0 z-0">
               <img
@@ -24,14 +38,14 @@ const BannerSection = () => {
             </div>
 
             {/* Content Layer */}
-            <div className="relative z-10 w-full px-10 md:px-20">
+            <div className="relative z-10 w-full px-6 md:px-20">
               <div className="max-w-xl">
                 <motion.h2
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.8, delay: 0.2 }}
-                  className="font-display text-4xl md:text-7xl lg:text-6xl font-medium text-white leading-[1.1] mb-8 tracking-tight"
+                  className="font-display text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-medium text-white leading-[1.1] mb-6 md:mb-8 tracking-tight"
                 >
                   Cuidado integral
                   <br />
@@ -45,7 +59,7 @@ const BannerSection = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.8, delay: 0.4 }}
-                  className="font-body text-base md:text-lg text-white/80 leading-relaxed mb-10 max-w-md"
+                  className="font-body text-sm sm:text-base md:text-lg text-white/80 leading-relaxed mb-8 md:mb-10 max-w-md"
                 >
                   A beleza verdadeira não se impõe — se revela. Protocolos personalizados
                   que realçam o que já existe em você, com método e sofisticação.
@@ -56,16 +70,16 @@ const BannerSection = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: 0.6 }}
-                  className="mb-12"
+                  className="mb-8 md:mb-12"
                 >
                   <a
                     href="https://wa.me/5561999999999?text=Olá! Gostaria de agendar uma avaliação na Visage."
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-4 rounded-xl bg-accent px-10 py-5 font-body text-sm tracking-[0.15em] uppercase text-accent-foreground font-semibold transition-all duration-300 hover:brightness-110 hover:shadow-xl"
+                    className="inline-flex items-center gap-3 md:gap-4 rounded-xl bg-accent px-6 py-4 md:px-10 md:py-5 font-body text-xs md:text-sm tracking-[0.15em] uppercase text-accent-foreground font-semibold transition-all duration-300 hover:brightness-110 hover:shadow-xl"
                   >
                     Agendar Avaliação
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
                   </a>
                 </motion.div>
 
@@ -103,9 +117,9 @@ const BannerSection = () => {
           </div>
 
           {/* Bottom Info Bar (Now integrated inside the same container) */}
-      <div className="w-full bg-[#7A6A62] text-white/90 rounded-t-xl overflow-hidden">
+      <div className="w-[90%] md:w-[85%] mx-auto bg-[#7A6A62] text-white/90 rounded-xl md:rounded-t-none overflow-hidden shadow-lg mb-6 relative z-10 mt-6 md:mt-0">
 
-            <div className="grid grid-cols-1 sm:grid-cols-3">
+            <div className="grid grid-cols-1 sm:grid-cols-3 divide-y divide-white/10 sm:divide-y-0 sm:divide-x">
               {[
                 { label: "Contato", value: "(61) 99999-9999" },
                 { label: "Localização", value: "Gama-DF, Brasília" },
@@ -113,10 +127,10 @@ const BannerSection = () => {
               ].map((item, index) => (
                 <div 
                   key={item.label} 
-                  className={`px-10 py-8 ${index !== 2 ? 'sm:border-r border-white/10' : ''}`}
+                  className="px-4 py-3 md:px-10 md:py-8 flex flex-row sm:flex-col items-center sm:items-start justify-between sm:justify-start gap-2"
                 >
-                  <p className="font-body text-[10px] tracking-[0.3em] uppercase text-accent font-bold mb-2">{item.label}</p>
-                  <p className="font-body text-sm font-medium">{item.value}</p>
+                  <p className="font-body text-[9px] md:text-[10px] tracking-[0.2em] md:tracking-[0.3em] uppercase text-accent font-bold sm:mb-2">{item.label}</p>
+                  <p className="font-body text-xs md:text-sm font-medium text-right sm:text-left">{item.value}</p>
                 </div>
               ))}
             </div>

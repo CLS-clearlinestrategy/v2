@@ -4,8 +4,8 @@ import OrganicJewel from "./OrganicJewel";
 
 const navLinks = [
   { label: "Início", href: "#inicio" },
-  { label: "Sobre", href: "#sobre" },
   { label: "Diferenciais", href: "#diferenciais" },
+  { label: "Sobre", href: "#sobre" },
   { label: "Protocolos", href: "#protocolos" },
   { label: "Depoimentos", href: "#depoimentos" },
 ];
@@ -33,15 +33,15 @@ const Header = () => {
           }`}
         >
           {/* Logo */}
-          <a href="#inicio" className="flex items-center gap-3 group">
-            <OrganicJewel size={28} className="text-accent transition-transform duration-500 group-hover:rotate-180" />
-            <span className="font-display text-xl tracking-wider text-white font-medium">
+          <a href="#inicio" className="flex items-center group">
+            <OrganicJewel size={34} className="text-accent transition-transform duration-500 group-hover:rotate-180" />
+            <h1 className="font-display text-2xl tracking-wider text-white font-medium">
               Visage
-            </span>
+            </h1>
           </a>
 
           {/* Desktop nav */}
-          <nav className="hidden md:flex items-center gap-10">
+          <nav className="hidden lg:flex items-center gap-10">
             {navLinks.map((link) => (
               <a
                 key={link.label}
@@ -58,7 +58,7 @@ const Header = () => {
             href="https://wa.me/5561999999999?text=Olá! Gostaria de agendar uma avaliação na Visage."
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden md:inline-block rounded-xl bg-accent/90 px-8 py-3 font-body text-[10px] tracking-[0.2em] uppercase text-accent-foreground font-bold transition-all duration-300 hover:bg-accent hover:scale-105 hover:shadow-md active:scale-95"
+            className="hidden lg:inline-block rounded-xl bg-accent/90 px-8 py-3 font-body text-[10px] tracking-[0.2em] uppercase text-accent-foreground font-bold transition-all duration-300 hover:bg-accent hover:scale-105 hover:shadow-md active:scale-95"
           >
             Agendar
           </a>
@@ -66,7 +66,7 @@ const Header = () => {
           {/* Mobile toggle */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="md:hidden flex flex-col gap-1.5 p-2"
+            className="lg:hidden flex flex-col gap-1.5 p-2"
             aria-label="Menu"
           >
             <span className={`block w-6 h-[1.5px] bg-white transition-transform duration-300 ${mobileOpen ? "rotate-45 translate-y-[4.5px]" : ""}`} />
@@ -82,9 +82,9 @@ const Header = () => {
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
-              className="md:hidden mt-4 rounded-3xl bg-[#7A6A62]/95 backdrop-blur-xl border border-white/10 overflow-hidden shadow-2xl"
+              className="lg:hidden mt-4 rounded-3xl bg-[#7A6A62]/95 backdrop-blur-xl border border-white/10 overflow-hidden shadow-2xl"
             >
-              <nav className="flex flex-col px-8 py-8 gap-6">
+              <nav className="flex flex-col px-6 py-6 gap-4">
                 {navLinks.map((link) => (
                   <a
                     key={link.label}
@@ -99,7 +99,7 @@ const Header = () => {
                   href="https://wa.me/5561999999999?text=Olá! Gostaria de agendar uma avaliação na Visage."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-4 text-center rounded-2xl bg-accent px-8 py-4 font-body text-[10px] tracking-[0.2em] uppercase text-accent-foreground font-bold"
+                  className="mt-2 text-center rounded-2xl bg-accent px-6 py-4 font-body text-[10px] tracking-[0.2em] uppercase text-accent-foreground font-bold"
                 >
                   Agendar Avaliação
                 </a>

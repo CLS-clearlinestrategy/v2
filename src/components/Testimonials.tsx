@@ -43,7 +43,7 @@ const Testimonials = () => {
   }, [next]);
 
   return (
-    <section className="section-padding bg-secondary overflow-hidden">
+    <section id="depoimentos" className="section-padding bg-secondary overflow-hidden">
       <div className="container-narrow">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

@@ -10,7 +10,7 @@ const Footer = () => {
         style={{ backgroundImage: `url(${jewelPatternBg})`, backgroundSize: '450px', backgroundRepeat: 'repeat' }}
       />
       <div className="container-narrow section-padding pb-10 lg:pb-10 relative z-10">
-        <div className="grid gap-16 md:grid-cols-3 mb-20">
+        <div className="grid gap-10 md:gap-16 md:grid-cols-3 mb-16 md:mb-20">
           {/* Brand */}
           <div>
             <div className="flex items-center mb-6">

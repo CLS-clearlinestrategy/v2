@@ -74,13 +74,13 @@ const WhyVisage = () => {
           </h2>
         </motion.div>
 
-        <div className="space-y-28 md:space-y-36">
+        <div className="space-y-20 md:space-y-36">
           {blocks.map((block, i) => {
             const isReversed = i % 2 !== 0;
             return (
               <div
                 key={block.title}
-                className={`grid gap-12 md:gap-16 md:grid-cols-2 items-center ${
+                className={`grid gap-8 md:gap-16 md:grid-cols-2 items-center ${
                   isReversed ? "md:direction-rtl" : ""
                 }`}
                 style={{ direction: isReversed ? "rtl" : "ltr" }}

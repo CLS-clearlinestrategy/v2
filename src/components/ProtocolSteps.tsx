@@ -58,7 +58,7 @@ const ProtocolSteps = () => {
             style={{ height: "100%" }}
           />
 
-          <div className="space-y-16">
+          <div className="space-y-12 md:space-y-16">
             {steps.map((step, i) => (
               <motion.div
                 key={step.number}
@@ -66,7 +66,7 @@ const ProtocolSteps = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: "-60px" }}
                 transition={{ duration: 0.6, delay: i * 0.1 }}
-                className="relative flex gap-8 md:gap-12"
+                className="relative flex gap-6 md:gap-12"
               >
                 {/* Number circle */}
                 <motion.div

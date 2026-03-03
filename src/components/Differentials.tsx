@@ -39,7 +39,7 @@ const fadeUp = {
 
 const Differentials = () => {
   return (
-    <section className="section-padding bg-secondary">
+    <section id="diferenciais" className="section-padding bg-background">
       <div className="container-narrow">
         <motion.div
           initial="hidden"
@@ -72,7 +72,7 @@ const Differentials = () => {
               viewport={{ once: true, margin: "-60px" }}
               custom={i}
               variants={fadeUp}
-              className="group relative rounded-md bg-background p-8 md:p-10 transition-all duration-500 hover:shadow-[var(--shadow-elevated)] hover:-translate-y-1"
+              className="group relative rounded-md bg-white p-6 md:p-10 transition-all duration-500 hover:shadow-[var(--shadow-elevated)] hover:-translate-y-1"
             >
               {/* Animated bordeaux line at bottom */}
               <div className="absolute bottom-0 left-1/2 -translate-x-1/2 h-[2px] w-0 bg-accent transition-all duration-500 group-hover:w-full rounded-b-md" />
